@@ -1,5 +1,9 @@
 @import 'variables';
 @import 'base.scss';
-@import 'header-wrapper';
+
+@import 'header';
+
 @import 'signin';
 @import 'signup';
+
+@import 'form-title';

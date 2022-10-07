@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { FormTitle } from '../formTitle';
 
 export default class Signin extends Component {
     render() {
         return (
             <div className='sign-in'>
-                ...signin
+                <FormTitle className='sign-in__title' text='Login'/>
             </div>
         );
     }
