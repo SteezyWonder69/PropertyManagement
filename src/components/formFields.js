@@ -20,14 +20,10 @@ export class FormInput extends Component {
 
 export class FormButton extends Component {
     render() {
-        const { className, title, input, type} = this.props;
+        const { className, title, input, type,} = this.props;
         return (
             <div className={`${className} form-button`}>
-                <button 
-                    className='form-button__button'
-                    type={type}
-                    {...input}                   
-                >{title}</button>
+                <button className='form-button__button' type={type} {...input}>{title}</button>
             </div>
         )
     }
