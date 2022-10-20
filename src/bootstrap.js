@@ -4,8 +4,9 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import reducers from "./reducers";
+import reduxThunk from "redux-thunk";
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 import "./style/main.scss";
 
