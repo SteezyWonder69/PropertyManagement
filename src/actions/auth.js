@@ -17,6 +17,7 @@ export function signUp(fields, success) {
                     payload: response.data
                 })
                 success()
+                
             })
             .catch(err => {
                 if (err) { console.log(err) }
@@ -35,6 +36,7 @@ export function signIn(fields, success) {
                     payload: response.data
                 })
                 success()
+                
             })
             .catch(err=> {
                 if(err) { console.log(err) }

@@ -4,12 +4,14 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 import SigninForm from './signinForm';
+import history from '../../history';
 
 class Signin extends Component {
 
     onSubmit = (fields) => {
         this.props.signIn(fields, () => {
-            this.props.history.push('/dashboard');
+            console.log('navigate to dashboard')
+            history.push('/dashboard');
         })
     }
 

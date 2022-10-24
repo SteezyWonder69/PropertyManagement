@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 import SignupForm from './signupForm';
+import history from '../../history';
 
 class Signup extends Component {
 
@@ -10,7 +11,8 @@ class Signup extends Component {
         
         this.props.signUp(fields, () => {
             console.log('navigate to dashboard')
-            this.props.history.push('/dashboard')
+            console.log(this.props.authenticated)
+            history.push('/dashboard')
             
         })
     }
