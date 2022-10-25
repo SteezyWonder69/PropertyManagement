@@ -5,15 +5,16 @@ import history from '../history';
 
 export default function(ComposedComponent) {
     class Authentication extends Component{
+        
         UNSAFE_componentWillMount() {
-            console.log(this.props.auth)
-            if(!!this.props.authenticated) {
+            console.log(this.props.authenticated)
+            if(!this.props.authenticated) {
                 history.push('/')
             };
         };
         UNSAFE_componentWillUpdate(nextProps) {
            
-            if(!!nextProps.authenticated) {
+            if(!nextProps.authenticated) {
                 history.push('/');
             };
         };
@@ -24,8 +25,8 @@ export default function(ComposedComponent) {
     
     function mapStateToProps(state) {
         console.log(state.auth, "hey there");
-        const { authenticated } = state.auth;
-        return { authenticated };
+        // const { authenticated } = state.auth;
+        return { authenticated: state.auth };
     };
     return connect(mapStateToProps)(Authentication);
 };
