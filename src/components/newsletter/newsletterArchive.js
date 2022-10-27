@@ -8,8 +8,11 @@ class NewsletterArchive extends Component {
         return (
             <div className='newsletter-archive'>
                 <div className='newsletter-archive__title'>Archive</div>
-                <div className='newsletter-archive__items'>
-                    <ArchiveItem title='hey' date='date'/>
+                <div className='newsletter-archive__items archive-items'>
+                    <ArchiveItem title='hey' date='date' />
+                    <ArchiveItem title='hey' date='date' />
+                    <ArchiveItem title='hey' date='date' />
+                    <ArchiveItem title='hey' date='date' />
                 </div>
             </div>
         );
