@@ -9,10 +9,10 @@ class NewsletterArchive extends Component {
             <div className='newsletter-archive'>
                 <div className='newsletter-archive__title'>Archive</div>
                 <div className='newsletter-archive__items archive-items'>
-                    <ArchiveItem title='hey' date='date' />
-                    <ArchiveItem title='hey' date='date' />
-                    <ArchiveItem title='hey' date='date' />
-                    <ArchiveItem title='hey' date='date' />
+                    <ArchiveItem title='hey' date={new Date()} />
+                    <ArchiveItem title='hey' date={new Date()} />
+                    <ArchiveItem title='hey' date={new Date()} />
+                    <ArchiveItem title='hey' date={new Date()} />
                 </div>
             </div>
         );
