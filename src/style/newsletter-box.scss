@@ -1,4 +1,6 @@
 .newsletter-box {
+    grid-row: box-s/box-e;
+    grid-column: box-s/box-e;
 
     height: 16rem;
     width: 16rem;
@@ -39,7 +41,7 @@
         align-self: center;
         justify-self: end;
 
-        transform: translateX(51%) rotate(45deg);
+        transform: translateX(54%) rotate(45deg);
         border: .15rem solid $color-red-BA;
         border-bottom: none;
         border-left: none;
