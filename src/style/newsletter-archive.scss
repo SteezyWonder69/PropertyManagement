@@ -19,11 +19,13 @@
         display: grid;
         row-gap: 1.6rem;
         margin-top: 1.6rem;
+        align-content: start;
     }
 }
 
 .archive-itmes {
-    grid-template-rows: repeat(auto-fit, 1fr);
+    // grid-template-rows: repeat(auto-fill, 1fr);
+    
 }
 
 .archive-item {
