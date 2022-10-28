@@ -40,4 +40,12 @@
             font-size: 1.6rem;
         }
     }
+    &__button {
+        grid-row: s/m;
+        justify-self: end;
+        align-self: end;
+        svg {
+            width: 15px;
+        }
+    }
 }
