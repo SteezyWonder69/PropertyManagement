@@ -19,7 +19,7 @@ import Signup from "./components/auth/signup";
 import Signin from "./components/auth/signin";
 
 import Dashboard from "./components/dashboard";
-import NewNewsletter from "./components/newsletter/newsletterNes";
+import NewNewsletter from "./components/newsletter/newsletterNew";
 
 
 
