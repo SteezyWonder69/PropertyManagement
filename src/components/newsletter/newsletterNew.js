@@ -5,16 +5,22 @@ import NewNewsletterForm from './newsletterNewForm';
 export default class NewNewsletter extends Component {
 
     onSubmit = (fields) => {
-        this.props.signIn(fields, () => {
-            console.log('navigate to dashboard')
-            history.push('/dashboard');
-        })
+        console.log('trying to submit')
+        // if(button == 'submit') {
+        //     // save new newsletter on the backend. perform a post request here
+        //     console.log('trying to save to backend')
+        // }
+        // this.props.history.push('/dashboard')
+    }
+
+    onCancel = () => {
+        console.log('trying to cancel')
     }
 
     render() {
         return (
             <div className='new-newsletter'>
-                <NewNewsletterForm onSubmit={(event) => this.onSubmit(event)}/>
+                <NewNewsletterForm onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)}/>
             </div>
         );
     }
