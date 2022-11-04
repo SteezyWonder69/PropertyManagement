@@ -55,8 +55,10 @@
 
 // BUTTON
 .form-button,
-.form-button-small {
-    &__button {
+.form-button-small,
+.form-image {
+    &__button,
+    &__replace {
         transition: all .2s ease;
         &:active {
             transform: scale(0.95) translateY(1px);
@@ -104,15 +106,40 @@
 
 
 .form-image {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: [title-s] 1fr [title-e image-s] 13.7rem [image-e];
+    grid-template-columns: [s] 16rem [e];
     &__title {
         @include red-title;
         margin-bottom: 2rem;
+        grid-row: title-s/title-e;
+        grid-column: s/e;
     }
     &__image {
         width: 16rem;
         height: 13.7rem;
         border: none;
+        grid-row: image-s/image-e;
+        grid-column: s/e;
+        background-color: gray;
+    }
+    &__replace {
+        border-radius: 1.6rem;
+        border: 1px solid white;
+        background-color: white;
+        width: 13rem;
+        height: 2.4rem;
+
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;
+
+        color: $color-red-BA;
+
+        grid-row: image-s/image-e;
+        grid-column: s/e;
+
+        justify-self: center;
+        align-self: center;
     }
 }

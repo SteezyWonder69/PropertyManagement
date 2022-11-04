@@ -7,7 +7,7 @@ export class FormInput extends Component {
         return (
             <div className={`${className} form-input`}>
                 <label className='form-input__title'>{title}</label>
-                <input 
+                <input
                     className='form-input__input'
                     type={type}
                     {...input}
@@ -24,12 +24,12 @@ export class FormTextArea extends Component {
         return (
             <div className={`${className} form-textarea`}>
                 <label className='form-textarea__title'>{title}</label>
-                <textarea 
+                <textarea
                     className='form-textarea__input'
                     type={type}
                     {...input}
                     placeholder={placeholder}
-                    
+
                 ></textarea>
             </div>
         )
@@ -58,10 +58,22 @@ export class FormImage extends Component {
                 <label className='form-image__title'>{title}</label>
                 <img
                     className='form-image__image'
-                    
                     src={imageURL}
                 />
-                <input {...input} type={type}/>
+                <input
+                    className='form-image__replace'
+                    type='button'
+                    value='Replace'
+                    onClick={() => document.getElementById('file') ? document.getElementById('file').click() : '' }
+                />
+                <input {...input}
+                    type='file'
+                    style={{ display: 'none' }}
+                    id='file'
+                    name='file'
+                    accepts='image/*'
+                    value={undefined}
+                />
             </div>
         )
     }
