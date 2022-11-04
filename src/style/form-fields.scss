@@ -122,6 +122,7 @@
         grid-row: image-s/image-e;
         grid-column: s/e;
         background-color: gray;
+        object-fit: cover;
     }
     &__replace {
         border-radius: 1.6rem;

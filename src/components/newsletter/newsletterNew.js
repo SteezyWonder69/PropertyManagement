@@ -10,11 +10,11 @@ export default class NewNewsletter extends Component {
         //     // save new newsletter on the backend. perform a post request here
         //     console.log('trying to save to backend')
         // }
-        // this.props.history.push('/dashboard')
+        this.props.history.push('/dashboard')
     }
 
     onCancel = () => {
-        console.log('trying to cancel')
+        this.props.history.push('/dashboard')
     }
 
     render() {
