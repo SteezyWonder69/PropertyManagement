@@ -5,12 +5,12 @@ import {
 
 import {
     fetchNewsletters,
-    fetchNewslettersWithId
+    fetchNewsletterWithId
 } from './newsletter'
 
 export {
     signUp,
     signIn,
     fetchNewsletters,
-    fetchNewslettersWithId
+    fetchNewsletterWithId
 };

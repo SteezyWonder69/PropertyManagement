@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import * as actions from '../../actions';
 
 import NewNewsletterForm from './newsletterNewForm';
 
-export default class EditNewsletter extends Component {
+class EditNewsletter extends Component {
 
     onSubmit = (fields) => {
         console.log('trying to submit')
@@ -18,14 +21,23 @@ export default class EditNewsletter extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.match.params.id);
+        this.props.fetchNewsletterWithId(this.props.match.params.id)
     }
 
     render() {
         return (
             <div className='new-newsletter'>
-                <NewNewsletterForm onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)} title='Edit Newsletter'/>
+                <NewNewsletterForm newsletterToEdit={this.props.newsletterToEdit} onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)} formTitle='Edit Newsletter'/>
             </div>
         );
     }
 }
+
+function mapStateToProps(state) {
+    const { newsletterToEdit } = state.newsletters;
+    return {
+        newsletterToEdit
+    }
+}
+
+export default connect(mapStateToProps, actions)(EditNewsletter);
