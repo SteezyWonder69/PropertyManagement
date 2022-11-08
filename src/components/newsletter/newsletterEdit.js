@@ -17,6 +17,10 @@ export default class EditNewsletter extends Component {
         this.props.history.push('/dashboard')
     }
 
+    componentDidMount() {
+        console.log(this.props.match.params.id);
+    }
+
     render() {
         return (
             <div className='new-newsletter'>
