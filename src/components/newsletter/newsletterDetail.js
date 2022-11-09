@@ -13,8 +13,8 @@ class NewsletterDetail extends Component {
     render() {
         return (
             <div className='newsletter-detail'>
-                <NewsletterBox/>
-                <NewsletterLatest/>
+                <NewsletterBox date={this.props.newsletterToEdit.date}/>
+                <NewsletterLatest {...this.props.newsletterToEdit}/>
             </div>
         );
     }
