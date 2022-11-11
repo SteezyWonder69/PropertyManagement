@@ -1,0 +1,48 @@
+.requests-box {
+   
+    height: 16rem;
+    width: 16rem;
+    border: .15rem solid $color-red-BA;
+    border-radius: .5rem;
+
+    color: $color-red-BA;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
+    grid-template-columns: [s] 1fr [e];
+    
+    &__count {
+        grid-row: s/m;
+        grid-column: s/e;
+        align-self: end;
+        font-size: 7rem;
+        line-height: 8.1rem;
+    }
+
+    &__title {
+        grid-column: s/e;
+        grid-row: m/e;
+        align-self: start;
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+
+    &__point {
+        grid-column: s/e;
+        grid-row: s/e;
+        height: 4rem;
+        width: 4rem;
+
+        align-self: center;
+        justify-self: end;
+
+        transform: translateX(54%) rotate(45deg);
+        border: .15rem solid $color-red-BA;
+        border-bottom: none;
+        border-left: none;
+        background-color: white;
+    }
+}
