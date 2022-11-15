@@ -8,11 +8,14 @@ export default class RequestsItem extends Component {
         return (
             <div className='requests-item'>
                 <Icon className='requests-item__icon' icon='fas fa-exclamation-triangle' />
-                <div className='requests-item__title'>Sick title bro</div>
+                <div className='requests-item__title'>
+                    <div className='requests-item__title__text'>Sick title bro</div>
+                    <Icon className='requests-item__title__arrow' icon='fas fa-sort-down' />
+                </div>
                 <div className='requests-item__tenant-unit'>
                     Spencer - Unit 318
                 </div>
-                <Icon className='requests-item__arrow' icon='fas fa-sort-down' />
+                
                 <div className='requests-item__date'>23/5/1005</div>
                 <Button className='requests-item__move' icon='fas fa-wrench' callback={() => conosole.log('move buddy')} />
                 <div className='requests-item__description'>
